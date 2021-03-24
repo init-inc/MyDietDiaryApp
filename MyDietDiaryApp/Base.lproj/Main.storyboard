@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FGt-HG-Y0v"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="bHt-kY-9eH"/>
                 </viewController>
@@ -27,18 +27,33 @@
         <!--Item 1-->
         <scene sceneID="Ewr-5H-k98">
             <objects>
-                <viewController id="ekf-6B-W6b" customClass="CalenderViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ekf-6B-W6b" customClass="CalendarViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ui2-LR-SDs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppT-zX-gPE" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="194" width="374" height="519"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XBj-Ui-vuw"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ppT-zX-gPE" firstAttribute="top" secondItem="XBj-Ui-vuw" secondAttribute="top" constant="150" id="nXd-Rj-v7r"/>
+                            <constraint firstItem="XBj-Ui-vuw" firstAttribute="bottom" secondItem="ppT-zX-gPE" secondAttribute="bottom" constant="100" id="pxY-Ic-pvL"/>
+                            <constraint firstItem="XBj-Ui-vuw" firstAttribute="trailing" secondItem="ppT-zX-gPE" secondAttribute="trailing" constant="20" id="ttl-FJ-Xkt"/>
+                            <constraint firstItem="ppT-zX-gPE" firstAttribute="leading" secondItem="XBj-Ui-vuw" secondAttribute="leading" constant="20" id="xaz-gD-h0x"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="WeU-EH-tVo"/>
+                    <connections>
+                        <outlet property="calendarView" destination="ppT-zX-gPE" id="Ul6-oJ-LMM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIu-ze-MZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445" y="-210"/>
+            <point key="canvasLocation" x="444.92753623188412" y="-210.26785714285714"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="kdf-C3-kub">
@@ -60,11 +75,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
