@@ -36,10 +36,27 @@
                                 <rect key="frame" x="20" y="194" width="374" height="519"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHM-tB-S4f">
+                                <rect key="frame" x="344" y="743" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="dN6-vf-dPS"/>
+                                    <constraint firstAttribute="height" constant="50" id="uQs-2n-bbf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="＋">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton:" destination="ekf-6B-W6b" eventType="touchUpInside" id="YlA-ub-rH7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XBj-Ui-vuw"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="XBj-Ui-vuw" firstAttribute="bottom" secondItem="aHM-tB-S4f" secondAttribute="bottom" constant="20" id="6ol-Bw-YoR"/>
+                            <constraint firstItem="XBj-Ui-vuw" firstAttribute="trailing" secondItem="aHM-tB-S4f" secondAttribute="trailing" constant="20" id="ARm-ic-3IE"/>
                             <constraint firstItem="ppT-zX-gPE" firstAttribute="top" secondItem="XBj-Ui-vuw" secondAttribute="top" constant="150" id="nXd-Rj-v7r"/>
                             <constraint firstItem="XBj-Ui-vuw" firstAttribute="bottom" secondItem="ppT-zX-gPE" secondAttribute="bottom" constant="100" id="pxY-Ic-pvL"/>
                             <constraint firstItem="XBj-Ui-vuw" firstAttribute="trailing" secondItem="ppT-zX-gPE" secondAttribute="trailing" constant="20" id="ttl-FJ-Xkt"/>
@@ -48,6 +65,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="WeU-EH-tVo"/>
                     <connections>
+                        <outlet property="addButton" destination="aHM-tB-S4f" id="l3L-JN-kXQ"/>
                         <outlet property="calendarView" destination="ppT-zX-gPE" id="Ul6-oJ-LMM"/>
                     </connections>
                 </viewController>
@@ -77,6 +95,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

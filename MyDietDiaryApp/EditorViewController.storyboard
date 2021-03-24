@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OJP-xn-z2P">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Editor View Controller-->
+        <scene sceneID="dxF-g0-SZ1">
+            <objects>
+                <viewController id="OJP-xn-z2P" customClass="EditorViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h1D-HN-M0a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDF-Ui-tS0">
+                                <rect key="frame" x="40" y="84" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="体重" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUU-fy-xHG">
+                                <rect key="frame" x="40" y="179" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gVD-el-qMr">
+                                <rect key="frame" x="40" y="125" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDa-u6-FGi">
+                                <rect key="frame" x="40" y="220" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jA4-lO-sOs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jA4-lO-sOs" firstAttribute="trailing" secondItem="dDa-u6-FGi" secondAttribute="trailing" constant="40" id="0Gr-yz-EiZ"/>
+                            <constraint firstItem="WDF-Ui-tS0" firstAttribute="top" secondItem="jA4-lO-sOs" secondAttribute="top" constant="40" id="2eN-8h-31x"/>
+                            <constraint firstItem="WDF-Ui-tS0" firstAttribute="leading" secondItem="jA4-lO-sOs" secondAttribute="leading" constant="40" id="OxI-RK-EGg"/>
+                            <constraint firstItem="gVD-el-qMr" firstAttribute="top" secondItem="WDF-Ui-tS0" secondAttribute="bottom" constant="20" id="Uwr-TF-RHs"/>
+                            <constraint firstItem="jA4-lO-sOs" firstAttribute="trailing" secondItem="gVD-el-qMr" secondAttribute="trailing" constant="40" id="VS4-Xg-1za"/>
+                            <constraint firstItem="VUU-fy-xHG" firstAttribute="top" secondItem="gVD-el-qMr" secondAttribute="bottom" constant="20" id="ccu-5J-XUC"/>
+                            <constraint firstItem="gVD-el-qMr" firstAttribute="leading" secondItem="WDF-Ui-tS0" secondAttribute="leading" id="qmw-Ae-D2T"/>
+                            <constraint firstItem="VUU-fy-xHG" firstAttribute="leading" secondItem="WDF-Ui-tS0" secondAttribute="leading" id="vbp-fY-hOT"/>
+                            <constraint firstItem="dDa-u6-FGi" firstAttribute="leading" secondItem="WDF-Ui-tS0" secondAttribute="leading" id="wB3-7N-LzO"/>
+                            <constraint firstItem="dDa-u6-FGi" firstAttribute="top" secondItem="VUU-fy-xHG" secondAttribute="bottom" constant="20" id="zrp-kg-rlw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvy-D3-Yae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="168"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
