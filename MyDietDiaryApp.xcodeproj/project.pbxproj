@@ -15,6 +15,9 @@
 		3B26116F260AC178006A98D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B26116D260AC178006A98D3 /* LaunchScreen.storyboard */; };
 		3B26117A260AC178006A98D3 /* MyDietDiaryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B261179260AC178006A98D3 /* MyDietDiaryAppTests.swift */; };
 		3B261185260AC178006A98D3 /* MyDietDiaryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B261184260AC178006A98D3 /* MyDietDiaryAppUITests.swift */; };
+		3B261196260AC1B5006A98D3 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B261195260AC1B5006A98D3 /* MainTabBarController.swift */; };
+		3B26119B260AC223006A98D3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26119A260AC223006A98D3 /* CalendarViewController.swift */; };
+		3B2611A0260AC232006A98D3 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26119F260AC232006A98D3 /* GraphViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		3B261180260AC178006A98D3 /* MyDietDiaryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDietDiaryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B261184260AC178006A98D3 /* MyDietDiaryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDietDiaryAppUITests.swift; sourceTree = "<group>"; };
 		3B261186260AC178006A98D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B261195260AC1B5006A98D3 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3B26119A260AC223006A98D3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3B26119F260AC232006A98D3 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				3B26116B260AC178006A98D3 /* Assets.xcassets */,
 				3B26116D260AC178006A98D3 /* LaunchScreen.storyboard */,
 				3B261170260AC178006A98D3 /* Info.plist */,
+				3B261195260AC1B5006A98D3 /* MainTabBarController.swift */,
+				3B26119A260AC223006A98D3 /* CalendarViewController.swift */,
+				3B26119F260AC232006A98D3 /* GraphViewController.swift */,
 			);
 			path = MyDietDiaryApp;
 			sourceTree = "<group>";
@@ -258,8 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B26119B260AC223006A98D3 /* CalendarViewController.swift in Sources */,
 				3B261167260AC178006A98D3 /* ViewController.swift in Sources */,
 				3B261163260AC178006A98D3 /* AppDelegate.swift in Sources */,
+				3B2611A0260AC232006A98D3 /* GraphViewController.swift in Sources */,
+				3B261196260AC1B5006A98D3 /* MainTabBarController.swift in Sources */,
 				3B261165260AC178006A98D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
