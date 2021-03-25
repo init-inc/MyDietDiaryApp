@@ -38,25 +38,42 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yG-fZ-TQ7">
+                                <rect key="frame" x="40" y="722" width="334" height="40"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pLN-ag-4D0"/>
+                                </constraints>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="OJP-xn-z2P" eventType="touchUpInside" id="EvP-1C-OO3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jA4-lO-sOs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jA4-lO-sOs" firstAttribute="trailing" secondItem="dDa-u6-FGi" secondAttribute="trailing" constant="40" id="0Gr-yz-EiZ"/>
                             <constraint firstItem="WDF-Ui-tS0" firstAttribute="top" secondItem="jA4-lO-sOs" secondAttribute="top" constant="40" id="2eN-8h-31x"/>
+                            <constraint firstItem="3yG-fZ-TQ7" firstAttribute="leading" secondItem="jA4-lO-sOs" secondAttribute="leading" constant="40" id="5i0-Oa-DPo"/>
                             <constraint firstItem="WDF-Ui-tS0" firstAttribute="leading" secondItem="jA4-lO-sOs" secondAttribute="leading" constant="40" id="OxI-RK-EGg"/>
                             <constraint firstItem="gVD-el-qMr" firstAttribute="top" secondItem="WDF-Ui-tS0" secondAttribute="bottom" constant="20" id="Uwr-TF-RHs"/>
                             <constraint firstItem="jA4-lO-sOs" firstAttribute="trailing" secondItem="gVD-el-qMr" secondAttribute="trailing" constant="40" id="VS4-Xg-1za"/>
                             <constraint firstItem="VUU-fy-xHG" firstAttribute="top" secondItem="gVD-el-qMr" secondAttribute="bottom" constant="20" id="ccu-5J-XUC"/>
+                            <constraint firstItem="jA4-lO-sOs" firstAttribute="bottom" secondItem="3yG-fZ-TQ7" secondAttribute="bottom" constant="100" id="p2A-5q-Zt1"/>
                             <constraint firstItem="gVD-el-qMr" firstAttribute="leading" secondItem="WDF-Ui-tS0" secondAttribute="leading" id="qmw-Ae-D2T"/>
                             <constraint firstItem="VUU-fy-xHG" firstAttribute="leading" secondItem="WDF-Ui-tS0" secondAttribute="leading" id="vbp-fY-hOT"/>
                             <constraint firstItem="dDa-u6-FGi" firstAttribute="leading" secondItem="WDF-Ui-tS0" secondAttribute="leading" id="wB3-7N-LzO"/>
+                            <constraint firstItem="jA4-lO-sOs" firstAttribute="trailing" secondItem="3yG-fZ-TQ7" secondAttribute="trailing" constant="40" id="wIw-Lw-7A0"/>
                             <constraint firstItem="dDa-u6-FGi" firstAttribute="top" secondItem="VUU-fy-xHG" secondAttribute="bottom" constant="20" id="zrp-kg-rlw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="inputDateTextField" destination="gVD-el-qMr" id="mfl-tU-xZC"/>
                         <outlet property="inputWeightTextField" destination="dDa-u6-FGi" id="sFc-Ph-2ms"/>
+                        <outlet property="saveButton" destination="3yG-fZ-TQ7" id="XOl-XM-gxh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvy-D3-Yae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -67,6 +84,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
