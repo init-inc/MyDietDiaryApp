@@ -15,14 +15,29 @@
                     <view key="view" contentMode="scaleToFill" id="BMp-vN-2eg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VI4-5g-axP" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="144" width="414" height="569"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FGt-HG-Y0v"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VI4-5g-axP" firstAttribute="trailing" secondItem="FGt-HG-Y0v" secondAttribute="trailing" id="451-VN-ZMs"/>
+                            <constraint firstItem="VI4-5g-axP" firstAttribute="top" secondItem="FGt-HG-Y0v" secondAttribute="top" constant="100" id="MCQ-QE-Oij"/>
+                            <constraint firstItem="FGt-HG-Y0v" firstAttribute="bottom" secondItem="VI4-5g-axP" secondAttribute="bottom" constant="100" id="VFm-bX-M0d"/>
+                            <constraint firstItem="VI4-5g-axP" firstAttribute="leading" secondItem="FGt-HG-Y0v" secondAttribute="leading" id="kpP-hg-Dnb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="bHt-kY-9eH"/>
+                    <connections>
+                        <outlet property="graphView" destination="VI4-5g-axP" id="9lm-En-kxT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abZ-TL-phh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445" y="439"/>
+            <point key="canvasLocation" x="444.92753623188412" y="438.61607142857139"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="Ewr-5H-k98">
