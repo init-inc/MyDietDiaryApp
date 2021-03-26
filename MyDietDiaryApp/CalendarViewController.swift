@@ -24,6 +24,8 @@ class CalendarViewController: UIViewController {
         configureButton()
         // FSCalendarDataSourceを有効化
         calendarView.dataSource = self
+        // FSCalendarDelegateを有効化
+        calendarView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,9 +58,12 @@ class CalendarViewController: UIViewController {
         addButton.layer.cornerRadius = addButton.bounds.width / 2
     }
     
-    func transitionToEditorView() {
+    func transitionToEditorView(with record: WeightRecord? = nil) {
         let storyboad = UIStoryboard(name: "EditorViewController", bundle: nil)
         guard let editorViewController = storyboad.instantiateInitialViewController() as? EditorViewController else { return }
+        if let record = record {
+            editorViewController.record = record
+        }
         present(editorViewController, animated: true)
     }
     
@@ -74,5 +79,13 @@ extension CalendarViewController: FSCalendarDataSource {
         // 比較対象のDate型の年月日が一致していた場合にtrueとなる
         let isEqualDate = dateList.contains(date.zeroclock)
         return isEqualDate ? 1 : 0
+    }
+}
+
+extension CalendarViewController: FSCalendarDelegate {
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        calendar.deselect(date)
+        guard let record = recordList.first(where: { $0.date.zeroclock == date.zeroclock }) else { return }
+        transitionToEditorView(with: record)
     }
 }
