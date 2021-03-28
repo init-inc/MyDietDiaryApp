@@ -18,6 +18,7 @@
 		3B261196260AC1B5006A98D3 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B261195260AC1B5006A98D3 /* MainTabBarController.swift */; };
 		3B26119B260AC223006A98D3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26119A260AC223006A98D3 /* CalendarViewController.swift */; };
 		3B2611A0260AC232006A98D3 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26119F260AC232006A98D3 /* GraphViewController.swift */; };
+		3B2D5448260F27100049DDB1 /* GraphDateTitleFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2D5447260F27100049DDB1 /* GraphDateTitleFormatter.swift */; };
 		3B7FA810260B013B0030B3B3 /* EditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7FA80F260B013B0030B3B3 /* EditorViewController.storyboard */; };
 		3B7FA815260B01710030B3B3 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA814260B01710030B3B3 /* EditorViewController.swift */; };
 		3B7FA823260B11E40030B3B3 /* WeightRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA822260B11E40030B3B3 /* WeightRecord.swift */; };
@@ -66,6 +67,7 @@
 		3B261195260AC1B5006A98D3 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		3B26119A260AC223006A98D3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3B26119F260AC232006A98D3 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		3B2D5447260F27100049DDB1 /* GraphDateTitleFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDateTitleFormatter.swift; sourceTree = "<group>"; };
 		3B7FA80F260B013B0030B3B3 /* EditorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditorViewController.storyboard; sourceTree = "<group>"; };
 		3B7FA814260B01710030B3B3 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		3B7FA822260B11E40030B3B3 /* WeightRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRecord.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				3B7FA814260B01710030B3B3 /* EditorViewController.swift */,
 				3B7FA822260B11E40030B3B3 /* WeightRecord.swift */,
 				3BDD00FC260C266900A892CC /* Date+Extension.swift */,
+				3B2D5447260F27100049DDB1 /* GraphDateTitleFormatter.swift */,
 			);
 			path = MyDietDiaryApp;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				3B2611A0260AC232006A98D3 /* GraphViewController.swift in Sources */,
 				3B7FA823260B11E40030B3B3 /* WeightRecord.swift in Sources */,
 				3B261196260AC1B5006A98D3 /* MainTabBarController.swift in Sources */,
+				3B2D5448260F27100049DDB1 /* GraphDateTitleFormatter.swift in Sources */,
 				3B261165260AC178006A98D3 /* SceneDelegate.swift in Sources */,
 				3B7FA815260B01710030B3B3 /* EditorViewController.swift in Sources */,
 				3BDD00FD260C266900A892CC /* Date+Extension.swift in Sources */,
