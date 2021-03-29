@@ -33,6 +33,14 @@ class GraphViewController: UIViewController {
         return dateFormatt
     }
     
+    var toolBar: UIToolbar {
+        let toolBarRect = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35)
+        let toolBar = UIToolbar(frame: toolBarRect)
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(didTapDone))
+        toolBar.setItems([doneItem], animated: true)
+        return toolBar
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setRecord()
@@ -46,6 +54,15 @@ class GraphViewController: UIViewController {
         var result = Array(realm.objects(WeightRecord.self))
         result.sort(by: { $0.date < $1.date })
         recordList = result
+        if let startDateText = startDateTextField.text,
+           let endDateText = endDateTextField.text,
+           let startDate = dateFormatter.date(from: startDateText),
+           let endDate = dateFormatter.date(from: endDateText) {
+            var filteredRecord = Array(realm.objects(WeightRecord.self)
+                                        .filter("date BETWEEN { %@, %@ }", startDate, endDate))
+            filteredRecord.sort(by: { $0.date < $1.date })
+            recordList = filteredRecord
+        }
     }
     
     func updateGraph() {
@@ -79,5 +96,23 @@ class GraphViewController: UIViewController {
         endDateTextField.inputView = endDatePicker
         startDateTextField.text = dateFormatter.string(from: pastMonth)
         endDateTextField.text = dateFormatter.string(from: today)
+        startDateTextField.inputAccessoryView = toolBar
+        endDateTextField.inputAccessoryView = toolBar
+        startDatePicker.addTarget(self, action: #selector(didChangeStartDate), for: .valueChanged)
+        endDatePicker.addTarget(self, action: #selector(didChangeEndDate), for: .valueChanged)
+    }
+    
+    @objc func didTapDone() {
+        setRecord()
+        updateGraph()
+        view.endEditing(true)
+    }
+    
+    @objc func didChangeStartDate(picker: UIDatePicker) {
+        startDateTextField.text = dateFormatter.string(from: picker.date)
+    }
+    
+    @objc func didChangeEndDate(picker: UIDatePicker) {
+        endDateTextField.text = dateFormatter.string(from: picker.date)
     }
 }
