@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3B261163260AC178006A98D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B261162260AC178006A98D3 /* AppDelegate.swift */; };
 		3B261165260AC178006A98D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B261164260AC178006A98D3 /* SceneDelegate.swift */; };
-		3B261167260AC178006A98D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B261166260AC178006A98D3 /* ViewController.swift */; };
 		3B26116A260AC178006A98D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B261168260AC178006A98D3 /* Main.storyboard */; };
 		3B26116C260AC178006A98D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B26116B260AC178006A98D3 /* Assets.xcassets */; };
 		3B26116F260AC178006A98D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B26116D260AC178006A98D3 /* LaunchScreen.storyboard */; };
@@ -53,7 +52,6 @@
 		3B26115F260AC178006A98D3 /* MyDietDiaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDietDiaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B261162260AC178006A98D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B261164260AC178006A98D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B261166260AC178006A98D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B261169260AC178006A98D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B26116B260AC178006A98D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B26116E260AC178006A98D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,21 +153,13 @@
 		3B261161260AC178006A98D3 /* MyDietDiaryApp */ = {
 			isa = PBXGroup;
 			children = (
-				3B261162260AC178006A98D3 /* AppDelegate.swift */,
-				3B261164260AC178006A98D3 /* SceneDelegate.swift */,
-				3B261166260AC178006A98D3 /* ViewController.swift */,
-				3B261168260AC178006A98D3 /* Main.storyboard */,
+				3B538F122612AEED00970DE9 /* Extension */,
+				3B538F0E2612AEBB00970DE9 /* Delegate */,
+				3B538F0A2612AE3900970DE9 /* Model */,
+				3B538F092612ADF600970DE9 /* Controller */,
+				3B538F082612ADCB00970DE9 /* View */,
 				3B26116B260AC178006A98D3 /* Assets.xcassets */,
-				3B26116D260AC178006A98D3 /* LaunchScreen.storyboard */,
 				3B261170260AC178006A98D3 /* Info.plist */,
-				3B261195260AC1B5006A98D3 /* MainTabBarController.swift */,
-				3B26119A260AC223006A98D3 /* CalendarViewController.swift */,
-				3B26119F260AC232006A98D3 /* GraphViewController.swift */,
-				3B7FA80F260B013B0030B3B3 /* EditorViewController.storyboard */,
-				3B7FA814260B01710030B3B3 /* EditorViewController.swift */,
-				3B7FA822260B11E40030B3B3 /* WeightRecord.swift */,
-				3BDD00FC260C266900A892CC /* Date+Extension.swift */,
-				3B2D5447260F27100049DDB1 /* GraphDateTitleFormatter.swift */,
 			);
 			path = MyDietDiaryApp;
 			sourceTree = "<group>";
@@ -190,6 +180,53 @@
 				3B261186260AC178006A98D3 /* Info.plist */,
 			);
 			path = MyDietDiaryAppUITests;
+			sourceTree = "<group>";
+		};
+		3B538F082612ADCB00970DE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B261168260AC178006A98D3 /* Main.storyboard */,
+				3B26116D260AC178006A98D3 /* LaunchScreen.storyboard */,
+				3B7FA80F260B013B0030B3B3 /* EditorViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B538F092612ADF600970DE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3B261195260AC1B5006A98D3 /* MainTabBarController.swift */,
+				3B26119A260AC223006A98D3 /* CalendarViewController.swift */,
+				3B26119F260AC232006A98D3 /* GraphViewController.swift */,
+				3B7FA814260B01710030B3B3 /* EditorViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3B538F0A2612AE3900970DE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B7FA822260B11E40030B3B3 /* WeightRecord.swift */,
+				3B2D5447260F27100049DDB1 /* GraphDateTitleFormatter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B538F0E2612AEBB00970DE9 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				3B261162260AC178006A98D3 /* AppDelegate.swift */,
+				3B261164260AC178006A98D3 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		3B538F122612AEED00970DE9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3BDD00FC260C266900A892CC /* Date+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,7 +469,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B26119B260AC223006A98D3 /* CalendarViewController.swift in Sources */,
-				3B261167260AC178006A98D3 /* ViewController.swift in Sources */,
 				3B261163260AC178006A98D3 /* AppDelegate.swift in Sources */,
 				3B2611A0260AC232006A98D3 /* GraphViewController.swift in Sources */,
 				3B7FA823260B11E40030B3B3 /* WeightRecord.swift in Sources */,
