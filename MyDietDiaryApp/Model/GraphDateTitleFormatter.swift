@@ -8,7 +8,7 @@
 import Foundation
 import Charts
 
-class GraphDateTitleFormatter: IAxisValueFormatter {
+class GraphDateTitleFormatter: AxisValueFormatter {
     var dateList: [Date] = []
     
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
